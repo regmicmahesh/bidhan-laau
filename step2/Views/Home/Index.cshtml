@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model step2.Controllers.Address
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h2>@ViewData["Sex"]ok sex</h2>
+    <h3>@Model.Name</h3>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div>@await Html.PartialAsync("_Greeting", Model, new ViewDataDictionary(ViewData){
+            {"index", "Mahesh"}
+        })</div>
+</div>
